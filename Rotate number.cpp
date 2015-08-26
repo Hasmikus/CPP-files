@@ -12,10 +12,14 @@ int main(){
     getch();
 }
     int rotation(int number){ 
-         int balance;  
-         balance=number%10;  
-          if ((number-balance)/10!=0) { 
-                rotatednumb=balance*10+rotation((number-balance)/10);      
-          } else return rotatednumb;
+         int balance;
+         rotatednumb=0;    
+          while ((number-number%10)/10!=0) { 
+                balance=number%10; 
+                number=(number-balance)/10;
+                rotatednumb=rotatednumb*10+balance;
+           }; 
+           rotatednumb=rotatednumb*10+number;
+           return rotatednumb;
               
     }
