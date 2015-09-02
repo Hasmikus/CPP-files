@@ -9,15 +9,15 @@ int main(){
     int numb,numb2,numb3; 
     cout<<"\nInput any integer number ";
     cin>>numb;  
-    cout<<"\nThe rotate number is "<<rotation(numb);
+    cout<<"\nThe rotated number is "<<rotation(numb);
     
     cout<<"\nInput any integer number ";
     cin>>numb2;  
-    cout<<"\nThe rotate number is "<<rotation(numb2);
+    cout<<"\nThe rotated number is "<<rotation(numb2);
     
     cout<<"\nInput any integer number ";
     cin>>numb3;  
-    cout<<"\nThe rotate number is "<<rotation(numb3);
+    cout<<"\nThe rotated number is "<<rotation(numb3);
     getch();
     return 0;
 }
