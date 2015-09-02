@@ -27,13 +27,11 @@ int main(){
         rotatednum=rotatednum*10+balance;      
           
         if ((number-balance)/10!=0) {
-        
-        return rotation((number-balance)/10);     
+           return rotation((number-balance)/10);     
         }
         else { 
-             result=rotatednum;
-             rotatednum=0;
-             return result;
-             
+           result=rotatednum;
+           rotatednum=0;
+           return result;     
         }
-}
+    }
