@@ -1,70 +1,87 @@
 #include <iostream>
 #include <conio.h>
-#include <cmath>
+#include <math.h>
 using namespace std;
 
 class Point {
-      int x,y;
-   public: 
-      void set_x (int);
-      void set_y (int);
-      int put_x ();
-      int put_y ();
+      public:
+             int x,y;
+      public: 
+              Point (int, int);     
+              int putx ();
+              int puty ();
+};
+
+Point::Point(int x1, int  y1) { 
+      x=x1;
+      y=y1; 
       }
-void Point::set_x(int x1) { 
-      x=x1; 
-     }
-void Point::set_y (int y1) {
-     y=y1;
-     }
-void Point::put_y () { 
+int Point::puty () { 
       return y; 
       }
-void Point::put_x () { 
+int Point::putx () { 
       return x; 
       }
 
 class Rectangle: public Point { 
-      int width, length;
+      float width, length;
       public: 
-              int set_width,length (void Point A.put_x(), void Point A.put_y(), 
-                                   void Point B.put_x(), void Point B.put_y(), 
-                                   void Point C.put_x(), void Point C.put_y());
-              int perimeter(int width, int length);
-              void put_width (); 
-              void put_length ();
-              int area(int width, int length);
-              void sameArea(Rectangle);
-}
-int Rectangle:Point::set_width,length (int Point A.set_x(), int Point A.set_y(), 
-                                      int Point B.set_x(), int Point B.set_y(), 
-                                      int Point C.set_x(int), int Point C.set_y(int)) {
-                                          width=sqrt(sqr(A.set_x(int)-B.set_x(int))+sqr(A.set_y(int)-B.set_y(int)));
-                                          length=sqrt(sqr(C.set_x(int)-B.set_x(int))+sqr(C.set_y(int)-B.set_y(int)));
-                                          }
-void parimeter (int width, int length) { 
-                   return 2*(width+length) 
+              Rectangle (int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4)
+                    :Point(x,y) {
+                    Point A(x1, y1);
+                    Point B(x2, y2);
+                    Point C(x3,y3);
+                    Point D(x4, y4);
+                    };
+              float perimeter(float width,float length);
+              float put_width(); 
+              float put_length();
+              void setWidth (int ,int , int , int );
+              void setLength (int ,int , int , int );
+              float area(float , float );
+              
+};
+
+void Rectangle::setWidth (int x1,int y1, int x2, int y2) {
+                   width=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+                   }  
+void Rectangle::setLength (int x1,int y1, int x4, int y4) {
+                   length=sqrt((x4-x1)*(x4-x1)+(y4-y1)*(y4-y1));
+                   }       
+float Rectangle::put_width(){
+                    return width;
+                   } 
+float Rectangle::put_length() {
+                    return length;
+                   }  
+float Rectangle::perimeter (float width,float length) { 
+                   return 2*(width+length); 
                    }
-void area(int width, int length) {
-                    return width*length 
-                    } 
+float Rectangle::area(float width,float length) {
+                    return width*length;  
+                   } 
+
 int main() {
-    cout<<"\nCoordinates of A point ";
-    cin>>x1;
-    A.set_x(int x1);
-    cin>>y1;
-    A.set_y(int y1);
-    cout<<"\nCoordinates of B point ";
-    cin>>x2;
-    B.set_x(int x2);
-    cin>>y2;
-    B.set_y(int y2);
-    cout<<"\nCoordinates of C point ";
-    cin>>x3;
-    C.set_x(int x3);
-    cin>>y3;
-    C.set_y(int y3);
-Rectangle First.(set
+    int x1,y1,x2,y2,x3,y3,x4,y4;
+    cout<<"\nInput coordinates for the 4 edges of rectangle. For example 0 1"<<endl;
+    cin>>x1>>y1>>x2>>y2>>x3>>y3>>x4>>y4;
+    Rectangle R1(x1,y1,x2,y2,x3,y3,x4,y4);
+    R1.setWidth(x1, y1, x2, y2);
+    R1.setLength(x1,y1, x4, y4);
+
+
+    cout<<"----------------------"<<endl;
+    cout<<"The coordinates of rectangle edges: (" <<x1<<";"<<y1<<"),"<<"("<<x2<<";"<<y2<<"),";
+    cout<<"("<<x3<<";"<<y3<<"),"<<"("<<x4<<";"<<y4<<")"<<endl;
+    cout<<"Width ="<<R1.put_width()<<"  Length="<<R1.put_length()<<endl;
+    cout<<"Perimeter = "<<R1.perimeter(R1.put_width(), R1.put_length())<<endl;
+    cout<<"Area= "<<R1.area(R1.put_width(),R1.put_length())<<endl;
+
+getch();
+return 0;
+}
+
+
     
                                       
               
