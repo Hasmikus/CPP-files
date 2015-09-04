@@ -1,6 +1,7 @@
+
+#include "point.h"
+#include <cmath>
 #include <iostream>
-#include "Points.h"
-#include <math.h>
 
 
 
@@ -14,8 +15,8 @@ int Point::puty () {
 int Point::putx () { 
       return x; 
       }
-float Point::distance (Point (int x2, int y2)) {
-      return sqrt((x-x2)*(x-x2)+(y-y2)*(y-y2));
+float Point::distance (Point *B(x2, y2)) {
+      return sqrt((x-B->putx())*(x-B->putx())+(y-B->puty())*(y-B->puty()));
       }
 
     
