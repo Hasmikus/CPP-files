@@ -1,10 +1,10 @@
-#include <iostream>
+#include "point.h"
 #include <conio.h>
-#include "Points.h"
+#include <iostream>
 
 using namespace std;
 
-int main() {
+int main () {
     int x1, y1,x2,y2;
     cout<<"Input coordinates of point A"<<endl;
     cin>>x1>>y1;
@@ -13,7 +13,7 @@ int main() {
     cin>>x2>>y2;
     Point B(x2,y2);
     
-    cout<<"The distance of A and B is "<<A.distance(B(x2,y2));
+    cout<<"The distance of A and B is "<<A.distance(&B(x2,y2));
     
     getch();
     return 0;
