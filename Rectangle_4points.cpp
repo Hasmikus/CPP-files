@@ -23,7 +23,7 @@ float Rectangle::area(float width,float length) {
                     return width*length;  
                    }
 void Rectangle::sameArea (Rectangle R2) {
-                   if (width=R2.get_width && length=R2.get_length) {
+                   if (width==R2.get_width() && length==R2.get_length()) {
                       cout<<"\nRectangles have the same sizes";
                       }
                    }
