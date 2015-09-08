@@ -5,11 +5,9 @@ class Point {
       private:
              int x,y;
       public: 
-              Point (int x1, int y1); 
-              ~Point();    
-              int putx ();
-              int puty ();
-              float distance (Point *);
-}
+              Point (int x1, int y1);     
+              int getx ();
+              int gety ();
+};
 
 #endif
