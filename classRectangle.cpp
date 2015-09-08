@@ -21,6 +21,13 @@ int main() {
     Rectangle R1(A, B, C, D);
     R1.setWidth(A, B) ;
     R1.setLength(A, D);
+    
+    Point L(x1_2,y1_2), M(x2_2,y2_2), N(x3_2,y3_2), P(x4_2,y4_2);
+    Rectangle R2(L, M, N, P);
+    R2.setWidth(L, M) ;
+    R2.setLength(L, P);
+    
+    
 
 
     cout<<"----------------------"<<endl;
@@ -29,6 +36,7 @@ int main() {
     cout<<"Width ="<<R1.get_width()<<"  Length="<<R1.get_length()<<endl;
     cout<<"Perimeter = "<<R1.perimeter(R1.get_width(), R1.get_length())<<endl;
     cout<<"Area= "<<R1.area(R1.get_width(),R1.get_length())<<endl;
+    R1.sameArea(R2);
 
 getch();
 return 0;
